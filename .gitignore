@@ -1,0 +1,16 @@
+node_modules/
+build/
+out/
+.venv/
+__pycache__/
+.DS_Store
+.env
+.env.*
+props.local.json
+public/audio/*
+!public/audio/README.md
+*.mp3
+*.wav
+*.m4a
+*.aac
+*.mp4

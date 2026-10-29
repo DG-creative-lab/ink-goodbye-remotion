@@ -1,0 +1,55 @@
+{
+  "name": "ink-goodbye-remotion",
+  "version": "1.0.0",
+  "description": "An editable ink-style farewell animation: share an idea, build, laugh and say goodbye.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DG-creative-lab/ink-goodbye-remotion.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.538",
+    "@remotion/media": "4.0.538",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.538",
+    "@remotion/renderer": "4.0.538",
+    "@remotion/bundler": "4.0.538"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.538",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "10.12.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio --no-open",
+    "build": "remotion bundle",
+    "lint": "eslint src && tsc",
+    "format": "prettier --write src scripts tests *.json *.ts *.mjs",
+    "test": "node --require ./scripts/register-typescript.cjs --test tests/*.test.cjs",
+    "check": "npm run lint && npm test && npm run build",
+    "render": "node scripts/export.mjs",
+    "render:still": "node scripts/export.mjs --still 1176",
+    "pack:source": "node scripts/package-source.mjs"
+  },
+  "author": "Dessi G",
+  "homepage": "https://github.com/DG-creative-lab/ink-goodbye-remotion#readme",
+  "bugs": {
+    "url": "https://github.com/DG-creative-lab/ink-goodbye-remotion/issues"
+  },
+  "keywords": [
+    "remotion",
+    "animation",
+    "stick-figure",
+    "farewell",
+    "svg",
+    "motion-design"
+  ]
+}
